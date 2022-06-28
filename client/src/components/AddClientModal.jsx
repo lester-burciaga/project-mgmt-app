@@ -70,11 +70,7 @@ export default function AddClientModal() {
             <div className='modal-body'>
               <form onSubmit={onSubmit}>
                 <div className='mb-3'>
-                  <label
-                    htmlFor='name
-                    '
-                    className='form-label'
-                  >
+                  <label htmlFor='name' className='form-label'>
                     Name
                   </label>
                   <input
@@ -86,11 +82,7 @@ export default function AddClientModal() {
                   />
                 </div>
                 <div className='mb-3'>
-                  <label
-                    htmlFor='email
-                    '
-                    className='form-label'
-                  >
+                  <label htmlFor='email' className='form-label'>
                     Email
                   </label>
                   <input
@@ -102,11 +94,7 @@ export default function AddClientModal() {
                   />
                 </div>
                 <div className='mb-3'>
-                  <label
-                    htmlFor='phone
-                    '
-                    className='form-label'
-                  >
+                  <label htmlFor='phone' className='form-label'>
                     Phone
                   </label>
                   <input
@@ -118,6 +106,7 @@ export default function AddClientModal() {
                   />
                 </div>
                 <button
+                  htmlFor='submit'
                   type='submit'
                   data-bs-dismiss='modal'
                   className='btn btn-secondary'

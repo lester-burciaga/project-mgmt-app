@@ -34,14 +34,13 @@ export default function AddProjectModal() {
 
     addProject(name, description, status, clientId);
 
-    //addClient(name, email, phone);
     setName('');
     setDescription('');
     setStatus('new');
   };
 
   if (loading) return null;
-  if (error) return 'Something Went Wrong';
+  if (error) return 'Something Went Wrong!';
 
   return (
     <>
@@ -82,11 +81,7 @@ export default function AddProjectModal() {
                 <div className='modal-body'>
                   <form onSubmit={onSubmit}>
                     <div className='mb-3'>
-                      <label
-                        htmlFor='name
-                    '
-                        className='form-label'
-                      >
+                      <label htmlFor='name' className='form-label'>
                         Name
                       </label>
                       <input
@@ -98,11 +93,7 @@ export default function AddProjectModal() {
                       />
                     </div>
                     <div className='mb-3'>
-                      <label
-                        htmlFor='description
-                    '
-                        className='form-label'
-                      >
+                      <label htmlFor='description' className='form-label'>
                         Description
                       </label>
                       <textarea
@@ -114,15 +105,10 @@ export default function AddProjectModal() {
                       ></textarea>
                     </div>
                     <div className='mb-3'>
-                      <label
-                        htmlFor='status
-                    '
-                        className='form-label'
-                      >
+                      <label htmlFor='status' className='form-label'>
                         Status
                       </label>
                       <select
-                        htmlFor='status'
                         id='status'
                         className='form-select'
                         value={status}
@@ -139,7 +125,7 @@ export default function AddProjectModal() {
                         Client
                       </label>
                       <select
-                        id='clientId'
+                        id='client'
                         className='form-select'
                         value={clientId}
                         onChange={(e) => setClientId(e.target.value)}
@@ -155,6 +141,7 @@ export default function AddProjectModal() {
 
                     <button
                       type='submit'
+                      htmlFor='submit'
                       data-bs-dismiss='modal'
                       className='btn btn-primary'
                     >

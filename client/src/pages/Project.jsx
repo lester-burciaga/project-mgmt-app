@@ -14,7 +14,7 @@ export default function Project() {
   });
 
   if (loading) return <Spinner />;
-  if (error) return <p>Something Went Wrong</p>;
+  if (error) return <p>Something Went Wrong!</p>;
 
   return (
     <>
@@ -24,9 +24,9 @@ export default function Project() {
             Back
           </Link>
           <h1>{data.project.name}</h1>
-          <p>{data.project.description}</p>
+          <p role="heading" aria-level="4">{data.project.description}</p>
           <h5 className='mt-3'>Project Status</h5>
-          <p className='lead'>{data.project.status}</p>
+          <p role="heading" aria-level="3" className='lead'>{data.project.status}</p>
           <ClientInfo client={data.project.client} />
 
           <EditProjectForm project={data.project} />
